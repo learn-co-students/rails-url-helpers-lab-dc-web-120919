@@ -1,1 +1,24 @@
-<h1><%= @student.to_s %></h1>
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+    <h1> <%= @student.first_name %> <%= @student.last_name %> </h1>
+    <h2> Status: <%= @student.active_status  %> </h2> 
+    <br>
+        <%= link_to('Change Active Status', activate_student_path(@student)) %>
+        <br>
+        <%= link_to('Go back to Students Index', "/students") %>
+    </body>
+</html>
